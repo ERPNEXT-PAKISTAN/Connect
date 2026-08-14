@@ -1,0 +1,53 @@
+{
+ "app": "connect",
+ "charts": [],
+ "content": "[{\"id\":\"connect-header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Connect</b></span>\",\"col\":12}},{\"id\":\"connect-card-inbox\",\"type\":\"card\",\"data\":{\"card_name\":\"Inbox\",\"col\":4}},{\"id\":\"connect-card-channels\",\"type\":\"card\",\"data\":{\"card_name\":\"Channels\",\"col\":4}},{\"id\":\"connect-card-setup\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+ "creation": "2026-08-15 03:20:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "share",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Connect",
+ "links": [
+  {"hidden": 0, "is_query_report": 0, "label": "Inbox", "link_count": 0, "link_type": "DocType", "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 0, "label": "Dashboard", "link_count": 0, "link_to": "connect-dashboard", "link_type": "Page", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Unified Inbox", "link_count": 0, "link_to": "connect-inbox", "link_type": "Page", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Conversations", "link_count": 0, "link_to": "Conversation", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Messages", "link_count": 0, "link_to": "Message", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Channels", "link_count": 0, "link_type": "DocType", "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 0, "label": "Channel Account", "link_count": 0, "link_to": "Channel Account", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Messaging Contact", "link_count": 0, "link_to": "Messaging Contact", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Message Template", "link_count": 0, "link_to": "Message Template", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Notification Rule", "link_count": 0, "link_to": "Notification Rule", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Settings", "link_count": 0, "link_type": "DocType", "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 0, "label": "Connect Settings", "link_count": 0, "link_to": "Connect Settings", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "External Connectors", "link_count": 0, "link_to": "External Connector", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Webhooks", "link_count": 0, "link_to": "Webhook Endpoint", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Delivery Logs", "link_count": 0, "link_to": "Delivery Log", "link_type": "DocType", "onboard": 0, "type": "Link"}
+ ],
+ "modified": "2026-08-15 03:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "Connect",
+ "name": "Connect",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "restrict_to_domain": "",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Connect Manager"},
+  {"role": "Connect User"}
+ ],
+ "sequence_id": 20.0,
+ "shortcuts": [
+  {"color": "Blue", "doc_view": "", "label": "Dashboard", "link_to": "connect-dashboard", "type": "Page"},
+  {"color": "Green", "doc_view": "", "label": "Inbox", "link_to": "connect-inbox", "type": "Page"},
+  {"color": "Gray", "doc_view": "", "label": "Settings", "link_to": "Connect Settings", "stats_filter": null, "type": "DocType"}
+ ],
+ "title": "Connect"
+}

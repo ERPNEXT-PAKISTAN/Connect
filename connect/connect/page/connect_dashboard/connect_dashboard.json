@@ -1,0 +1,20 @@
+{
+ "creation": "2026-08-15 03:20:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "share",
+ "idx": 0,
+ "modified": "2026-08-15 03:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "Connect",
+ "name": "connect-dashboard",
+ "owner": "Administrator",
+ "page_name": "connect-dashboard",
+ "roles": [
+  { "role": "System Manager" },
+  { "role": "Connect Manager" },
+  { "role": "Connect User" }
+ ],
+ "standard": "Yes",
+ "title": "Connect Dashboard"
+}

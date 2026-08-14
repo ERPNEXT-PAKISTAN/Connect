@@ -1,0 +1,519 @@
+{
+ "actions": [],
+ "creation": "2026-08-15 03:20:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account_name",
+  "channel",
+  "provider",
+  "column_break_id",
+  "enabled",
+  "is_default",
+  "company",
+  "external_connector",
+  "whatsapp_waha_sb",
+  "waha_base_url",
+  "waha_api_key",
+  "waha_session",
+  "column_break_waha",
+  "waha_webhook_secret",
+  "waha_timeout",
+  "waha_verify_ssl",
+  "webjs_sb",
+  "webjs_service_url",
+  "webjs_api_key",
+  "webjs_session",
+  "webjs_timeout",
+  "meta_sb",
+  "meta_phone_number_id",
+  "meta_waba_id",
+  "meta_access_token",
+  "column_break_meta",
+  "meta_app_id",
+  "meta_app_secret",
+  "meta_verify_token",
+  "meta_api_version",
+  "telegram_sb",
+  "telegram_bot_name",
+  "telegram_bot_token",
+  "telegram_bot_username",
+  "column_break_tg",
+  "telegram_webhook_secret",
+  "telegram_default_chat",
+  "allowed_principals",
+  "firebase_sb",
+  "firebase_project_id",
+  "firebase_service_account",
+  "column_break_fb",
+  "firebase_vapid",
+  "firebase_default_topic",
+  "slack_sb",
+  "slack_mode",
+  "slack_webhook_url",
+  "slack_bot_token",
+  "column_break_slack",
+  "slack_signing_secret",
+  "slack_default_channel",
+  "discord_sb",
+  "discord_mode",
+  "discord_webhook_url",
+  "discord_bot_token",
+  "column_break_dc",
+  "discord_application_id",
+  "discord_guild_id",
+  "discord_default_channel",
+  "email_sb",
+  "email_account",
+  "webhook_sb",
+  "webhook_url",
+  "webhook_secret",
+  "webhook_bearer_token",
+  "webhook_timeout",
+  "status_sb",
+  "connection_status",
+  "last_successful_connection",
+  "column_break_st",
+  "last_error",
+  "last_tested_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "options": "WhatsApp\nTelegram\nFirebase\nSlack\nDiscord\nEmail\nWebhook\nInternal\nFrappe-Connect",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Select",
+   "label": "Provider",
+   "options": "WAHA\nWhatsApp Web.js\nMeta Cloud API\nTelegram\nFirebase\nSlack\nDiscord\nEmail\nWebhook\nInternal\nFrappe-Connect",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_id",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "0",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Default for Channel",
+   "default": "0"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "external_connector",
+   "fieldtype": "Link",
+   "label": "External Connector",
+   "options": "External Connector",
+   "depends_on": "eval:['WAHA','WhatsApp Web.js','Frappe-Connect'].includes(doc.provider)"
+  },
+  {
+   "fieldname": "whatsapp_waha_sb",
+   "fieldtype": "Section Break",
+   "label": "WAHA",
+   "depends_on": "eval:doc.provider=='WAHA'"
+  },
+  {
+   "fieldname": "waha_base_url",
+   "fieldtype": "Data",
+   "label": "Base URL"
+  },
+  {
+   "fieldname": "waha_api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "waha_session",
+   "fieldtype": "Data",
+   "label": "Session",
+   "default": "default"
+  },
+  {
+   "fieldname": "column_break_waha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "waha_webhook_secret",
+   "fieldtype": "Password",
+   "label": "Webhook Secret"
+  },
+  {
+   "fieldname": "waha_timeout",
+   "fieldtype": "Int",
+   "label": "Timeout",
+   "default": "20"
+  },
+  {
+   "fieldname": "waha_verify_ssl",
+   "fieldtype": "Check",
+   "label": "Verify SSL",
+   "default": "1"
+  },
+  {
+   "fieldname": "webjs_sb",
+   "fieldtype": "Section Break",
+   "label": "whatsapp-web.js",
+   "depends_on": "eval:doc.provider=='WhatsApp Web.js'"
+  },
+  {
+   "fieldname": "webjs_service_url",
+   "fieldtype": "Data",
+   "label": "Service URL"
+  },
+  {
+   "fieldname": "webjs_api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "webjs_session",
+   "fieldtype": "Data",
+   "label": "Session"
+  },
+  {
+   "fieldname": "webjs_timeout",
+   "fieldtype": "Int",
+   "label": "Timeout",
+   "default": "20"
+  },
+  {
+   "fieldname": "meta_sb",
+   "fieldtype": "Section Break",
+   "label": "Meta Cloud API",
+   "depends_on": "eval:doc.provider=='Meta Cloud API'"
+  },
+  {
+   "fieldname": "meta_phone_number_id",
+   "fieldtype": "Data",
+   "label": "Phone Number ID"
+  },
+  {
+   "fieldname": "meta_waba_id",
+   "fieldtype": "Data",
+   "label": "WhatsApp Business Account ID"
+  },
+  {
+   "fieldname": "meta_access_token",
+   "fieldtype": "Password",
+   "label": "Access Token"
+  },
+  {
+   "fieldname": "column_break_meta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meta_app_id",
+   "fieldtype": "Data",
+   "label": "App ID"
+  },
+  {
+   "fieldname": "meta_app_secret",
+   "fieldtype": "Password",
+   "label": "App Secret"
+  },
+  {
+   "fieldname": "meta_verify_token",
+   "fieldtype": "Data",
+   "label": "Webhook Verify Token"
+  },
+  {
+   "fieldname": "meta_api_version",
+   "fieldtype": "Data",
+   "label": "API Version",
+   "default": "v21.0"
+  },
+  {
+   "fieldname": "telegram_sb",
+   "fieldtype": "Section Break",
+   "label": "Telegram",
+   "depends_on": "eval:doc.provider=='Telegram'"
+  },
+  {
+   "fieldname": "telegram_bot_name",
+   "fieldtype": "Data",
+   "label": "Bot Name"
+  },
+  {
+   "fieldname": "telegram_bot_token",
+   "fieldtype": "Password",
+   "label": "Bot Token"
+  },
+  {
+   "fieldname": "telegram_bot_username",
+   "fieldtype": "Data",
+   "label": "Bot Username"
+  },
+  {
+   "fieldname": "column_break_tg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "telegram_webhook_secret",
+   "fieldtype": "Password",
+   "label": "Webhook Secret"
+  },
+  {
+   "fieldname": "telegram_default_chat",
+   "fieldtype": "Data",
+   "label": "Default Chat"
+  },
+  {
+   "fieldname": "allowed_principals",
+   "fieldtype": "Table",
+   "label": "Allowed Users / Groups",
+   "options": "Connect Allowed Principal"
+  },
+  {
+   "fieldname": "firebase_sb",
+   "fieldtype": "Section Break",
+   "label": "Firebase",
+   "depends_on": "eval:doc.provider=='Firebase'"
+  },
+  {
+   "fieldname": "firebase_project_id",
+   "fieldtype": "Data",
+   "label": "Project ID"
+  },
+  {
+   "fieldname": "firebase_service_account",
+   "fieldtype": "Password",
+   "label": "Service Account JSON"
+  },
+  {
+   "fieldname": "column_break_fb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "firebase_vapid",
+   "fieldtype": "Small Text",
+   "label": "VAPID Configuration"
+  },
+  {
+   "fieldname": "firebase_default_topic",
+   "fieldtype": "Data",
+   "label": "Default Topic"
+  },
+  {
+   "fieldname": "slack_sb",
+   "fieldtype": "Section Break",
+   "label": "Slack",
+   "depends_on": "eval:doc.provider=='Slack'"
+  },
+  {
+   "fieldname": "slack_mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "Webhook\nBot",
+   "default": "Webhook"
+  },
+  {
+   "fieldname": "slack_webhook_url",
+   "fieldtype": "Password",
+   "label": "Webhook URL"
+  },
+  {
+   "fieldname": "slack_bot_token",
+   "fieldtype": "Password",
+   "label": "Bot Token"
+  },
+  {
+   "fieldname": "column_break_slack",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "slack_signing_secret",
+   "fieldtype": "Password",
+   "label": "Signing Secret"
+  },
+  {
+   "fieldname": "slack_default_channel",
+   "fieldtype": "Data",
+   "label": "Default Channel"
+  },
+  {
+   "fieldname": "discord_sb",
+   "fieldtype": "Section Break",
+   "label": "Discord",
+   "depends_on": "eval:doc.provider=='Discord'"
+  },
+  {
+   "fieldname": "discord_mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "Webhook\nBot",
+   "default": "Webhook"
+  },
+  {
+   "fieldname": "discord_webhook_url",
+   "fieldtype": "Password",
+   "label": "Webhook URL"
+  },
+  {
+   "fieldname": "discord_bot_token",
+   "fieldtype": "Password",
+   "label": "Bot Token"
+  },
+  {
+   "fieldname": "column_break_dc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discord_application_id",
+   "fieldtype": "Data",
+   "label": "Application ID"
+  },
+  {
+   "fieldname": "discord_guild_id",
+   "fieldtype": "Data",
+   "label": "Guild ID"
+  },
+  {
+   "fieldname": "discord_default_channel",
+   "fieldtype": "Data",
+   "label": "Default Channel"
+  },
+  {
+   "fieldname": "email_sb",
+   "fieldtype": "Section Break",
+   "label": "Email",
+   "depends_on": "eval:doc.provider=='Email'"
+  },
+  {
+   "fieldname": "email_account",
+   "fieldtype": "Link",
+   "label": "Email Account",
+   "options": "Email Account"
+  },
+  {
+   "fieldname": "webhook_sb",
+   "fieldtype": "Section Break",
+   "label": "Webhook",
+   "depends_on": "eval:doc.provider=='Webhook'"
+  },
+  {
+   "fieldname": "webhook_url",
+   "fieldtype": "Data",
+   "label": "Webhook URL"
+  },
+  {
+   "fieldname": "webhook_secret",
+   "fieldtype": "Password",
+   "label": "Secret"
+  },
+  {
+   "fieldname": "webhook_bearer_token",
+   "fieldtype": "Password",
+   "label": "Bearer Token"
+  },
+  {
+   "fieldname": "webhook_timeout",
+   "fieldtype": "Int",
+   "label": "Timeout",
+   "default": "15"
+  },
+  {
+   "fieldname": "status_sb",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "connection_status",
+   "fieldtype": "Select",
+   "label": "Connection",
+   "options": "Unknown\nConnected\nError\nDisabled",
+   "default": "Unknown",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "last_successful_connection",
+   "fieldtype": "Datetime",
+   "label": "Last Successful Connection",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_st",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_error",
+   "fieldtype": "Small Text",
+   "label": "Last Error",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_tested_at",
+   "fieldtype": "Datetime",
+   "label": "Last Tested At",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-08-15 03:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "Connect",
+ "name": "Channel Account",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Connect Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:account_name",
+ "naming_rule": "By fieldname",
+ "title_field": "account_name",
+ "search_fields": "channel,provider"
+}

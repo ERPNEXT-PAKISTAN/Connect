@@ -1,0 +1,6 @@
+.connect-status-ok {
+	color: var(--green-600, #16a34a);
+}
+.connect-status-err {
+	color: var(--red-600, #dc2626);
+}

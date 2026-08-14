@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "creation": "2026-08-15 03:20:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_tab",
+  "enabled",
+  "enable_internal_chat",
+  "enable_send_message_button",
+  "column_break_gen",
+  "default_channel",
+  "default_account",
+  "send_tab",
+  "enabled_doctypes",
+  "attach_pdf_by_default",
+  "queue_tab",
+  "retry_limit",
+  "retry_backoff_seconds",
+  "advanced_tab",
+  "debug_logging",
+  "webhook_path_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_tab",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1"
+  },
+  {
+   "fieldname": "enable_internal_chat",
+   "fieldtype": "Check",
+   "label": "Enable Internal Chat",
+   "default": "1"
+  },
+  {
+   "fieldname": "enable_send_message_button",
+   "fieldtype": "Check",
+   "label": "Enable Send Message Button",
+   "default": "1"
+  },
+  {
+   "fieldname": "column_break_gen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_channel",
+   "fieldtype": "Select",
+   "label": "Default Channel",
+   "options": "WhatsApp\nTelegram\nFirebase\nSlack\nDiscord\nEmail\nWebhook\nInternal"
+  },
+  {
+   "fieldname": "default_account",
+   "fieldtype": "Link",
+   "label": "Default Account",
+   "options": "Channel Account"
+  },
+  {
+   "fieldname": "send_tab",
+   "fieldtype": "Tab Break",
+   "label": "Send Message"
+  },
+  {
+   "fieldname": "enabled_doctypes",
+   "fieldtype": "Table",
+   "label": "Enabled DocTypes",
+   "options": "Connect Enabled DocType"
+  },
+  {
+   "fieldname": "attach_pdf_by_default",
+   "fieldtype": "Check",
+   "label": "Attach PDF by Default",
+   "default": "1"
+  },
+  {
+   "fieldname": "queue_tab",
+   "fieldtype": "Tab Break",
+   "label": "Queue"
+  },
+  {
+   "fieldname": "retry_limit",
+   "fieldtype": "Int",
+   "label": "Retry Limit",
+   "default": "5"
+  },
+  {
+   "fieldname": "retry_backoff_seconds",
+   "fieldtype": "Int",
+   "label": "Retry Backoff (seconds)",
+   "default": "60"
+  },
+  {
+   "fieldname": "advanced_tab",
+   "fieldtype": "Tab Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "debug_logging",
+   "fieldtype": "Check",
+   "label": "Debug Logging",
+   "default": "0"
+  },
+  {
+   "fieldname": "webhook_path_note",
+   "fieldtype": "Small Text",
+   "label": "Webhook Path",
+   "default": "/api/method/connect.api.webhooks.receive?provider=<provider>&account=<account>",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-08-15 03:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "Connect",
+ "name": "Connect Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Connect Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

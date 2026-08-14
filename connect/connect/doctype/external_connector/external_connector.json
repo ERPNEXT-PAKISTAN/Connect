@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "creation": "2026-08-15 03:20:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "connector_name",
+  "connector_type",
+  "enabled",
+  "column_break_ec",
+  "base_url",
+  "api_key",
+  "webhook_secret",
+  "timeout",
+  "verify_ssl",
+  "waha_sb",
+  "default_session",
+  "n8n_sb",
+  "webhook_base_url",
+  "ollama_sb",
+  "model",
+  "ocr_sb",
+  "ocr_mode",
+  "ocr_languages",
+  "ocr_max_pages",
+  "ocr_max_file_size_mb",
+  "status_sb",
+  "connection_status",
+  "last_successful_connection",
+  "last_error"
+ ],
+ "fields": [
+  {
+   "fieldname": "connector_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "connector_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "WAHA\nWhatsApp Web.js\nn8n\nOllama\nOCR\nFrappe-Connect",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "0",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_ec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_url",
+   "fieldtype": "Data",
+   "label": "Base URL"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "webhook_secret",
+   "fieldtype": "Password",
+   "label": "Webhook Secret"
+  },
+  {
+   "fieldname": "timeout",
+   "fieldtype": "Int",
+   "label": "Timeout",
+   "default": "15"
+  },
+  {
+   "fieldname": "verify_ssl",
+   "fieldtype": "Check",
+   "label": "Verify SSL",
+   "default": "1"
+  },
+  {
+   "fieldname": "waha_sb",
+   "fieldtype": "Section Break",
+   "label": "WAHA",
+   "depends_on": "eval:doc.connector_type=='WAHA'"
+  },
+  {
+   "fieldname": "default_session",
+   "fieldtype": "Data",
+   "label": "Default Session",
+   "default": "default"
+  },
+  {
+   "fieldname": "n8n_sb",
+   "fieldtype": "Section Break",
+   "label": "n8n",
+   "depends_on": "eval:doc.connector_type=='n8n'"
+  },
+  {
+   "fieldname": "webhook_base_url",
+   "fieldtype": "Data",
+   "label": "Webhook Base URL"
+  },
+  {
+   "fieldname": "ollama_sb",
+   "fieldtype": "Section Break",
+   "label": "Ollama",
+   "depends_on": "eval:doc.connector_type=='Ollama'"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "default": "qwen2.5-coder:3b"
+  },
+  {
+   "fieldname": "ocr_sb",
+   "fieldtype": "Section Break",
+   "label": "OCR",
+   "depends_on": "eval:doc.connector_type=='OCR'"
+  },
+  {
+   "fieldname": "ocr_mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "Disabled\nHTTP\nExecutable",
+   "default": "Disabled"
+  },
+  {
+   "fieldname": "ocr_languages",
+   "fieldtype": "Data",
+   "label": "Languages",
+   "default": "eng"
+  },
+  {
+   "fieldname": "ocr_max_pages",
+   "fieldtype": "Int",
+   "label": "Max Pages",
+   "default": "10"
+  },
+  {
+   "fieldname": "ocr_max_file_size_mb",
+   "fieldtype": "Int",
+   "label": "Max File Size (MB)",
+   "default": "20"
+  },
+  {
+   "fieldname": "status_sb",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "connection_status",
+   "fieldtype": "Select",
+   "label": "Connection",
+   "options": "Unknown\nConnected\nError\nDisabled",
+   "default": "Unknown",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "last_successful_connection",
+   "fieldtype": "Datetime",
+   "label": "Last Successful Connection",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_error",
+   "fieldtype": "Small Text",
+   "label": "Last Error",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-08-15 03:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "Connect",
+ "name": "External Connector",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Connect Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:connector_name",
+ "naming_rule": "By fieldname"
+}
