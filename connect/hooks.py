@@ -4,15 +4,17 @@ app_publisher = "Connect contributors"
 app_description = "Lightweight native messaging, inbox, and provider connectors for ERPNext"
 app_email = "connect@local"
 app_license = "mit"
+app_logo_url = "/assets/connect/images/connect-logo.svg"
+app_home = "/app/connect"
 
 required_apps = ["frappe"]
 
 add_to_apps_screen = [
 	{
 		"name": "connect",
-		"logo": "/assets/connect/images/connect-logo.svg",
-		"title": "Connect",
-		"route": "/app/connect-dashboard",
+		"logo": app_logo_url,
+		"title": app_title,
+		"route": app_home,
 	}
 ]
 

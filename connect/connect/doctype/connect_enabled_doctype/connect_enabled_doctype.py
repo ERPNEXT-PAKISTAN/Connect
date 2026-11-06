@@ -4,5 +4,5 @@
 from frappe.model.document import Document
 
 
-class ConnectEnabledDoctype(Document):
+class ConnectEnabledDocType(Document):
 	pass

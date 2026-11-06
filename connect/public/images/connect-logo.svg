@@ -1,4 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Connect">
-  <rect width="64" height="64" rx="14" fill="#2490ef"/>
-  <path fill="#fff" d="M18 32c0-7.7 6.3-14 14-14 4.6 0 8.7 2.2 11.3 5.6l-4.2 3.1A8.5 8.5 0 0 0 32 23.5 8.5 8.5 0 0 0 23.5 32 8.5 8.5 0 0 0 32 40.5c3.2 0 6-1.8 7.4-4.4H32v-5.2h16.5V47H43v-5.6A14 14 0 0 1 18 32z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f66d0"/>
+      <stop offset="1" stop-color="#123d8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <g stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="32" y1="23.2" x2="32" y2="16.2"/>
+    <line x1="39.6" y1="27.6" x2="45.5" y2="24.1"/>
+    <line x1="39.6" y1="36.4" x2="45.5" y2="39.9"/>
+    <line x1="32" y1="40.8" x2="32" y2="47.8"/>
+    <line x1="24.4" y1="36.4" x2="18.5" y2="39.9"/>
+    <line x1="24.4" y1="27.6" x2="18.5" y2="24.1"/>
+    <path d="M18.5 24.1 L32 16.2 L45.5 24.1 L45.5 39.9 L32 47.8 L18.5 39.9 Z"/>
+  </g>
+  <circle cx="32" cy="16.2" r="2.6" fill="#fff"/>
+  <circle cx="45.5" cy="24.1" r="2.6" fill="#fff"/>
+  <circle cx="45.5" cy="39.9" r="2.6" fill="#fff"/>
+  <circle cx="32" cy="47.8" r="2.6" fill="#fff"/>
+  <circle cx="18.5" cy="39.9" r="2.6" fill="#fff"/>
+  <circle cx="18.5" cy="24.1" r="2.6" fill="#fff"/>
+  <circle cx="32" cy="32" r="7.6" fill="#fff"/>
+  <circle cx="32" cy="32" r="3" fill="#1f66d0"/>
 </svg>

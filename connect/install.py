@@ -55,7 +55,7 @@ def _ensure_settings() -> None:
 	if not settings.enable_send_message_button:
 		settings.enable_send_message_button = 1
 		changed = True
-	if not settings.get("enabled_doctypes"):
+	if not settings.get("enabled_doctypes") and frappe.db.exists("DocType", "Connect Enabled DocType"):
 		for dt in DEFAULT_SEND_DOCTYPES:
 			if frappe.db.exists("DocType", dt):
 				settings.append("enabled_doctypes", {"document_type": dt, "enabled": 1})
